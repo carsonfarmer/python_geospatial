@@ -75,6 +75,9 @@ sudo apt-get install -y gdal-bin libgdal-dev
     * First install [`brew`](http://brew.sh/)
 ```bash
 ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
+```
+   * Then update and install `gdal`
+```
 brew doctor
 brew update
 brew install gdal
@@ -84,8 +87,8 @@ brew install gdal
     * Linux: `sudo apt-get install git`
     * OSX:   `brew install git`
 
-* The `openpyxl` dependency of `pandas` may produce a funny warning
-   *`UserWarning: Installed openpyxl is not supported at this time. Use >=1.6.1 and <2.0.0`
+* The `openpyxl` dependency of `pandas` may produce a funny warning: `UserWarning: Installed openpyxl is not supported at this time. Use >=1.6.1 and <2.0.0`
+
    * To fix this warning, try the following:
 ```bash
 pip install openpyxl
