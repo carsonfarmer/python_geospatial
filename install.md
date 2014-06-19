@@ -72,10 +72,7 @@ sudo apt-get install -y gdal-bin libgdal-dev
 ```
 
 * OSX Initial Setup:
-    * First install [`brew`](http://brew.sh/)
-```bash
-ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
-```
+    * First install [`brew`](http://brew.sh/): `ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"`
    * Then update and install `gdal`
 ```
 brew doctor
