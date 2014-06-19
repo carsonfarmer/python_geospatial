@@ -16,7 +16,7 @@ conda install pip
 conda install cython
 ```
 
-* Install required packages
+* Install required packages (on Windows, use [binaries from here](http://www.lfd.uci.edu/~gohlke/pythonlibs/) for `shapely` and `pyproj`)
 ```bash
 conda install matplotlib
 conda install shapely
