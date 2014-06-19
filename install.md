@@ -11,6 +11,11 @@ source acivate scipygis
 conda install pip
 ```
 
+* If you don't already have it, you might need to install `cython`
+```bash
+conda install cython
+```
+
 * Install required packages
 ```bash
 conda install matplotlib
@@ -33,12 +38,14 @@ pip install git+git://github.com/kjordahl/geopandas.git
 pip install pyshp
 pip install git+git://github.com/SciTools/cartopy.git
 ```
+
 * mplleaflet (for making slippy maps)
 ```bash
 pip install git+git://github.com/mpld3/mplexporter.git
 pip install git+git://github.com/jwass/mplleaflet.git
 ```
-    * geojson.py for shooting data to the web!
+
+* geojson.py for shooting data to the web!
 ```bash
 pip install git+git://github.com/jwass/geojsonio.py.git
 ```
@@ -73,15 +80,13 @@ brew update
 brew install gdal
 ```
 
-* If you don't already have it, you'll need to install git
+* If you don't already have it, you'll need to install `git`
     * Linux: `sudo apt-get install git`
     * OSX:   `brew install git`
 
 * The `openpyxl` dependency of `pandas` may produce a funny warning
-```python
-UserWarning: Installed openpyxl is not supported at this time. Use >=1.6.1 and <2.0.0
-```
-To fix this warning, try the following:
+   *`UserWarning: Installed openpyxl is not supported at this time. Use >=1.6.1 and <2.0.0`
+   * To fix this warning, try the following:
 ```bash
 pip install openpyxl
 pip uninstall openpyxl
@@ -96,8 +101,3 @@ sudo apt-get install g++
 * On OSX (Mavericks), if you don't already have developer tools installed, `pip install pyproj` will 
 probably fail (due to missing `gcc`) and then ask you if you want to install them, so click 'yes' and 
 then rerun `pip install pyproj`.
-
-* If you don't already have it, you might need `cython`
-```bash
-conda install cython
-```
