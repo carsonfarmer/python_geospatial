@@ -97,6 +97,8 @@ brew install gdal
     * OSX:   `brew install git`
     * Windows: Download and install git [from here](http://www.git-scm.com/downloads). When installing, make sure you choose to "Use Git from the Windows Command Prompt" (You may also want to install optional Unix tools). You can also download GitHub for Windows [here](https://windows.github.com/).
 
+* In *some* cases, it may be better to `pip install shapely` than to `conda install shapely`, particularly when using `cartopy`.
+
 * The `openpyxl` dependency of `pandas` may produce a funny warning: `UserWarning: Installed openpyxl is not supported at this time. Use >=1.6.1 and <2.0.0`
 
    * To fix this warning, try the following:
