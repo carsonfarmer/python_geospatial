@@ -62,6 +62,14 @@ conda install basemap
 pip install psycopg2
 ```
 
+## Install QGIS
+
+* Go to the [official QGIS page](http://qgis.org/en/site/forusers/download.html) for details, or install via `brew` on OSX, `apt-get` on Linux, or `OSGeo4W` on Windows.
+
+## Alternative Install Guide
+
+* Here is the [install guide](https://github.com/kjordahl/SciPy2013#installation-instructions) from a [similar course](https://github.com/kjordahl/SciPy2013) last year.
+
 ## Known Issues
 
 * Linux Initial Setup
