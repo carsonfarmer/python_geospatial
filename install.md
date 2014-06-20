@@ -33,7 +33,7 @@ pip install git+git://github.com/kjordahl/geopandas.git
 
 ## (Web)mapping Packages
 
-* Install `cartopy` (on Windows, use [binaries from here](http://www.lfd.uci.edu/~gohlke/pythonlibs/) for `cartopy)
+* Install `cartopy` (on Windows, use [binaries from here](http://www.lfd.uci.edu/~gohlke/pythonlibs/) for `cartopy`)
 ```bash
 pip install pyshp
 pip install git+git://github.com/SciTools/cartopy.git
@@ -82,7 +82,7 @@ brew install gdal
 
 * Windows Initial Setup
    * Download and install GDAL [from here](http://www.lfd.uci.edu/~gohlke/pythonlibs/#gdal)
-   * If you use this one, then you can also use the `fiona` binary from that site. Otherwise, you'll have to play around with system PATHs etc.
+   * If you use this one, then you can also use the `fiona` binary from that site. Otherwise, you'll have to play around with system PATHs etc. Others have had success with [OSGeo4W](http://trac.osgeo.org/osgeo4w/), which includes many important libraries and their Python bindings.
 
 * If you don't already have it, you'll need to install `git`
     * Linux: `sudo apt-get install git`
