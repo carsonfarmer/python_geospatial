@@ -6,7 +6,7 @@ __pycache__/
 *.so
 
 # IPython files
-*.ipybn*
+.ipynb_checkpoints
 
 # Distribution / packaging
 .Python
