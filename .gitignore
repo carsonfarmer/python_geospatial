@@ -6,7 +6,11 @@ __pycache__/
 *.so
 
 # IPython files
-.ipynb_checkpoints
+.ipynb_checkpoints/
+
+# Other stuff
+presentation/
+data/manhattan.tif
 
 # Distribution / packaging
 .Python
