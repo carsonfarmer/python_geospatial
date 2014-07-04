@@ -39,6 +39,12 @@ pip install pyshp
 pip install git+git://github.com/SciTools/cartopy.git
 ```
 
+* Alternatively (better?), you can install `cartopy` via `conda` like this:
+```bash
+conda remove geos shapely cartopy
+conda install -c rsignell cartopy
+```
+
 * mplleaflet (for making slippy maps)
 ```bash
 pip install git+git://github.com/mpld3/mplexporter.git
