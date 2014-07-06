@@ -36,6 +36,7 @@ pip install git+git://github.com/kjordahl/geopandas.git
 * Install `cartopy` (on Windows, use [binaries from here](http://www.lfd.uci.edu/~gohlke/pythonlibs/) for `cartopy`)
 ```bash
 pip install pyshp
+pip install Cython
 pip install git+git://github.com/SciTools/cartopy.git
 ```
 
