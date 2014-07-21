@@ -27,6 +27,8 @@ pip install descartes
 pip install rasterio
 ```
 
+Note: You can use `pillow` in place of `PIL` if you like.
+
 * Install `geopandas` (important!)
 ```bash
 pip install git+git://github.com/kjordahl/geopandas.git
