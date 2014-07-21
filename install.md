@@ -92,7 +92,7 @@ sudo apt-get install -y gdal-bin libgdal-dev
 * OSX Initial Setup
     * First install [`brew`](http://brew.sh/): `ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"`
    * Then update and install `gdal`
-```
+```bash
 brew doctor
 brew update
 brew install gdal
@@ -117,9 +117,13 @@ pip install openpyxl
 pip uninstall openpyxl
 pip install openpyxl==1.8.6 
 ```
+* In some cases, importing `shapely` on OSX might fail while loading the GEOS library. This could throw an exception of the form "OSError: Could not find library c or load any of its variants". This can be fixed by using some newer versions or worked around by setting the following environment variable (add to your `.bash_profile`; see [this issue](https://github.com/cfarmer/python_geospatial/issues/3) for details):
+```bash
+export DYLD_FALLBACK_LIBRARY_PATH=$(HOME)/lib:/usr/local/lib:/lib:/usr/lib
+```
 
 * On vanilla Ubuntu, you might need to install `g++` before installing `rasterio`:
-```
+```bash
 sudo apt-get install g++
 ```
 
