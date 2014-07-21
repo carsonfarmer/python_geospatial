@@ -21,6 +21,7 @@ conda install cython
 conda install matplotlib
 conda install shapely
 conda install fiona
+conda install PIL
 pip install pyproj
 pip install descartes
 pip install rasterio
