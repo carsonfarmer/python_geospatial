@@ -20,17 +20,17 @@
       ```
 
 * Install required packages (on Windows, use [binaries from here](http://www.lfd.uci.edu/~gohlke/pythonlibs/) for `shapely`, `pyproj`, and `rasterio`)
-   * Note: You can use `pillow` in place of `PIL` if you like.
 
-        ```bash
-        conda install matplotlib
-        conda install shapely
-        conda install fiona
-        conda install PIL
-        pip install pyproj
-        pip install descartes
-        pip install rasterio
-        ```
+      ```bash
+      conda install matplotlib
+      conda install shapely
+      conda install fiona
+      conda install PIL
+      pip install pyproj
+      pip install descartes
+      pip install rasterio
+      ```
+  * Note: You can use `pillow` in place of `PIL` if you like.
 
 * Install `geopandas` (important!)
 
