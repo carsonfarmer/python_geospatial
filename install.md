@@ -7,17 +7,17 @@
 
 * Create a new virtual environment (Skip this step on Windows, trust me, it'll be easier):
 
-        ```bash
-        conda create -n pygeo pandas ipython-notebook matplotlib
-        source acivate pygeo
-        conda install pip
-        ```
+      ```bash
+      conda create -n pygeo pandas ipython-notebook matplotlib
+      source acivate pygeo
+      conda install pip
+      ```
 
 * If you don't already have it, you might need to install `cython`
 
-        ```bash
-        conda install cython
-        ```
+      ```bash
+      conda install cython
+      ```
 
 * Install required packages (on Windows, use [binaries from here](http://www.lfd.uci.edu/~gohlke/pythonlibs/) for `shapely`, `pyproj`, and `rasterio`)
    * Note: You can use `pillow` in place of `PIL` if you like.
@@ -33,47 +33,54 @@
         ```
 
 * Install `geopandas` (important!)
-        ```bash
-        pip install git+git://github.com/kjordahl/geopandas.git
-        ```
+
+      ```bash
+      pip install git+git://github.com/kjordahl/geopandas.git
+      ```
 
 ## (Web)mapping Packages
 
 * Install `cartopy` (on Windows, use [binaries from here](http://www.lfd.uci.edu/~gohlke/pythonlibs/) for `cartopy`)
-```bash
-pip install pyshp
-pip install Cython
-pip install git+git://github.com/SciTools/cartopy.git
-```
+
+    ```bash 
+    pip install pyshp
+    pip install Cython
+    pip install git+git://github.com/SciTools/cartopy.git
+    ```
 
 * Alternatively (better?), you can install `cartopy` via `conda` like this:
-```bash
-conda remove geos shapely cartopy
-conda install -c rsignell cartopy
-```
+
+    ```bash
+    conda remove geos shapely cartopy
+    conda install -c rsignell cartopy
+    ```
 
 * mplleaflet (for making slippy maps)
-```bash
-pip install git+git://github.com/mpld3/mplexporter.git
-pip install git+git://github.com/jwass/mplleaflet.git
-```
+
+    ```bash
+    pip install git+git://github.com/mpld3/mplexporter.git
+    pip install git+git://github.com/jwass/mplleaflet.git
+    ```
 
 * geojson.py for shooting data to the web!
-```bash
-pip install git+git://github.com/jwass/geojsonio.py.git
-```
+
+    ```bash
+    pip install git+git://github.com/jwass/geojsonio.py.git
+    ```
 
 ## Optional Packages
 
 * Install `basemap`, a common package for making static maps
-```bash
-conda install basemap
-```
+
+    ```bash
+    conda install basemap
+    ```
 
 * Install `psycopg2` for interacting with PostGIS
-```bash
-pip install psycopg2
-```
+
+    ```bash
+    pip install psycopg2
+    ```
 
 ## Install QGIS
 
