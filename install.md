@@ -121,6 +121,7 @@
 ## Known Issues
 
 * In *some* cases, it may be better to `pip install shapely` than to `conda install shapely`, particularly when using `cartopy`.
+* If `cartopy` and `shapely` don't place nice together, it may be because of version issues. Please take a look here for a possible fix: https://github.com/carsonfarmer/python_geospatial/issues/3
 
 ### Linux Issues
 
