@@ -127,38 +127,45 @@
 
 ## Known Issues
 
-* Linux Initial Setup
+* In *some* cases, it may be better to `pip install shapely` than to `conda install shapely`, particularly when using `cartopy`.
+
+### Linux Issues
+
+* Initial Setup
 
     ```bash
+    sudo apt-get install git
     sudo add-apt-repository -y ppa:ubuntugis/ppa
     sudo apt-get update -qq
     sudo apt-get install -y gdal-bin libgdal-dev
     ```
 
-* OSX Initial Setup
+* On vanilla Ubuntu, you might need to install `g++` before installing `rasterio` and others:
+
+      ```bash
+      sudo apt-get install g++
+      ```
+
+### OS X Issues
+
+* Initial Setup
    * First install [`brew`](http://brew.sh/): `ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"`
    * Then update and install `gdal` (You might be able to skip this step if you `conda install fiona` [see above]).
 
       ```bash
       brew doctor
       brew update
+      brew install git
       brew tap osgeo/osgeo4mac
       brew install gdal
       brew install qgis
       ```
+      
+* On Mavericks+ if you don't already have developer tools installed, `pip install pyproj` will 
+probably fail (due to missing `gcc`) and then ask you if you want to install them, so click 'yes' and 
+then rerun `pip install pyproj`.
 
-* Windows Initial Setup
-   * Download and install GDAL [from here](http://www.lfd.uci.edu/~gohlke/pythonlibs/#gdal)
-   * If you use this one, then you can also use the `fiona` binary from that site. Otherwise, you'll have to play around with system PATHs etc. Others have had success with [OSGeo4W](http://trac.osgeo.org/osgeo4w/), which includes many important libraries and their Python bindings.
-
-* If you don't already have it, you'll need to install `git`
-    * Linux: `sudo apt-get install git`
-    * OSX:   `brew install git`
-    * Windows: Download and install git [from here](http://www.git-scm.com/downloads). When installing, make sure you choose to "Use Git from the Windows Command Prompt" (You may also want to install optional Unix tools). You can also download GitHub for Windows [here](https://windows.github.com/).
-
-* In *some* cases, it may be better to `pip install shapely` than to `conda install shapely`, particularly when using `cartopy`.
-
-* In some cases, importing `shapely` on OSX might fail while loading the GEOS library:
+* In *some* cases, importing `shapely` on OS X might fail while loading the GEOS library:
       ```bash
       OSError: Could not find library c or load any of its variants.
       ```
@@ -168,14 +175,15 @@
       export DYLD_FALLBACK_LIBRARY_PATH=$(HOME)/lib:/usr/local/lib:/lib:/usr/lib
       ```
 
-* On vanilla Ubuntu, you might need to install `g++` before installing `rasterio`:
+### Windows Issues
 
-      ```bash
-      sudo apt-get install g++
-      ```
+* Initial Setup
+   * Download and install GDAL [from here](http://www.lfd.uci.edu/~gohlke/pythonlibs/#gdal)
+   * If you use this one, then you should also use the `fiona` binary from that site. Otherwise, you'll have to play around with system PATHs etc. Others have had success with [OSGeo4W](http://trac.osgeo.org/osgeo4w/), which includes many important libraries and their Python bindings.
 
-* On OSX (Mavericks+), if you don't already have developer tools installed, `pip install pyproj` will 
-probably fail (due to missing `gcc`) and then ask you if you want to install them, so click 'yes' and 
-then rerun `pip install pyproj`.
+* If you don't already have it, you'll need to install `git`:
+    * Download and install git [from here](http://www.git-scm.com/downloads).
+    * When installing, make sure you choose to "Use Git from the Windows Command Prompt" (You may also want to install optional Unix tools).
+    * You can also download GitHub for Windows [here](https://windows.github.com/).
 
 * On Windows, `source` is not needed when activating a virtual environment if you are using the Anaconda Command Prompt:  `activate scipygis`.
