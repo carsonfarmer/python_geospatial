@@ -158,7 +158,11 @@
 
 * In *some* cases, it may be better to `pip install shapely` than to `conda install shapely`, particularly when using `cartopy`.
 
-* In some cases, importing `shapely` on OSX might fail while loading the GEOS library. This could throw an exception of the form "OSError: Could not find library c or load any of its variants". This can be fixed by using some newer versions or worked around by setting the following environment variable (add to your `.bash_profile`; see [this issue](https://github.com/cfarmer/python_geospatial/issues/3) for details):
+* In some cases, importing `shapely` on OSX might fail while loading the GEOS library:
+      ```bash
+      OSError: Could not find library c or load any of its variants.
+      ```
+  * This can be fixed by using a newer version, or worked around by setting the following environment variable (add to your `.bash_profile`; see [this issue](https://github.com/cfarmer/python_geospatial/issues/3) for details):
 
       ```bash
       export DYLD_FALLBACK_LIBRARY_PATH=$(HOME)/lib:/usr/local/lib:/lib:/usr/lib
