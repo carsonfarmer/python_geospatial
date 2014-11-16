@@ -158,16 +158,6 @@
 
 * In *some* cases, it may be better to `pip install shapely` than to `conda install shapely`, particularly when using `cartopy`.
 
-* The `openpyxl` dependency of `pandas` may produce a funny warning: `UserWarning: Installed openpyxl is not supported at this time. Use >=1.6.1 and <2.0.0`
-
-   * To fix this warning, try the following:
-
-      ```bash
-      pip install openpyxl
-      pip uninstall openpyxl
-      pip install openpyxl==1.8.6 
-      ```
-
 * In some cases, importing `shapely` on OSX might fail while loading the GEOS library. This could throw an exception of the form "OSError: Could not find library c or load any of its variants". This can be fixed by using some newer versions or worked around by setting the following environment variable (add to your `.bash_profile`; see [this issue](https://github.com/cfarmer/python_geospatial/issues/3) for details):
 
       ```bash
@@ -180,7 +170,7 @@
       sudo apt-get install g++
       ```
 
-* On OSX (Mavericks), if you don't already have developer tools installed, `pip install pyproj` will 
+* On OSX (Mavericks+), if you don't already have developer tools installed, `pip install pyproj` will 
 probably fail (due to missing `gcc`) and then ask you if you want to install them, so click 'yes' and 
 then rerun `pip install pyproj`.
 
