@@ -70,13 +70,6 @@
     pip install cartopy
     ```
 
-  * If you aren't on Windows, you can alternatively try the `binstar` method like this:
-
-    ```bash
-    conda remove geos shapely cartopy
-    conda install -c rsignell cartopy
-    ```
-
 * Install `mplleaflet` (for making slippy maps). See the `Known Issues` below about install `git`.
 
     ```bash
