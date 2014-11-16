@@ -25,18 +25,18 @@
 * Install required packages (on Windows, you might need to install [binaries from here](http://www.lfd.uci.edu/~gohlke/pythonlibs/) for `shapely`, `pyproj`, and `rasterio`).
 
       ```bash
-      conda install shapely
-      conda install fiona
-      conda install PIL
-      conda install pyproj
-      conda install descartes
+      pip install shapely
+      pip install fiona
+      pip install PIL
+      pip install pyproj
+      pip install descartes
       pip install rasterio
       ```
   * You can use `pillow` in place of `PIL` if you like.
-  * If any of the above commands cause an error, you can use `pip` instead (replace `PACKAGE` below with the package you are trying to install):
+  * If any of the above commands cause an error, you can try using `conda` instead (replace `PACKAGE` below with the package you are trying to install):
 
     ```bash
-    pip install PACKAGE
+    conda install PACKAGE
     ```
   * or check to see if a `conda` package exists using `binstar`:
 
@@ -49,7 +49,7 @@
       ```bash
       binstar show <USER/PACKAGE>
       ```
-    * For example, I used the following to install `pyproj` on OSX:
+    * For example, you could used the following to install `pyproj` on OS X:
 
       ```bash
       conda install --channel https://conda.binstar.org/asmeurer pyproj
