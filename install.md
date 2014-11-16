@@ -2,37 +2,40 @@
 
 ## Base Install
 
-* Install [Anaconda](http://continuum.io/downloads) (I'm using Anaconda-2.0.1 [64-Bit - Python 2.7])
+* Install [`Anaconda`](http://continuum.io/downloads) (I'm using Anaconda-2.1.0 [64-Bit - Python 2.7])
+   * We're using `Anaconda` because it helps us to keep our `Python` environment clean and manageable. If you prefer, you can also use [`Canopy`](https://store.enthought.com/downloads/) or an another alternative `Python` environment.
 
 * Create a new virtual environment (Skip this step on Windows, trust me, it'll be easier):
-```bash
-conda create -n scipygis pandas ipython-notebook
-source acivate scipygis
-conda install pip
-```
+
+        ```bash
+        conda create -n pygeo pandas ipython-notebook matplotlib
+        source acivate pygeo
+        conda install pip
+        ```
 
 * If you don't already have it, you might need to install `cython`
-```bash
-conda install cython
-```
+
+        ```bash
+        conda install cython
+        ```
 
 * Install required packages (on Windows, use [binaries from here](http://www.lfd.uci.edu/~gohlke/pythonlibs/) for `shapely`, `pyproj`, and `rasterio`)
-```bash
-conda install matplotlib
-conda install shapely
-conda install fiona
-conda install PIL
-pip install pyproj
-pip install descartes
-pip install rasterio
-```
+   * Note: You can use `pillow` in place of `PIL` if you like.
 
-Note: You can use `pillow` in place of `PIL` if you like.
+        ```bash
+        conda install matplotlib
+        conda install shapely
+        conda install fiona
+        conda install PIL
+        pip install pyproj
+        pip install descartes
+        pip install rasterio
+        ```
 
 * Install `geopandas` (important!)
-```bash
-pip install git+git://github.com/kjordahl/geopandas.git
-```
+        ```bash
+        pip install git+git://github.com/kjordahl/geopandas.git
+        ```
 
 ## (Web)mapping Packages
 
