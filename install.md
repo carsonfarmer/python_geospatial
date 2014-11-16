@@ -9,7 +9,10 @@
 
       ```bash
       conda create -n pygeo pandas ipython-notebook matplotlib
-      source acivate pygeo
+      source activate pygeo
+      ```
+* Install `pip` for later (`pip` allows us to install additional `Python` packages not available via `conda`:
+      ```bash
       conda install pip
       ```
 
@@ -19,50 +22,69 @@
       conda install cython
       ```
 
-* Install required packages (on Windows, use [binaries from here](http://www.lfd.uci.edu/~gohlke/pythonlibs/) for `shapely`, `pyproj`, and `rasterio`)
+* Install required packages (on Windows, you might need to install [binaries from here](http://www.lfd.uci.edu/~gohlke/pythonlibs/) for `shapely`, `pyproj`, and `rasterio`).
 
       ```bash
-      conda install matplotlib
       conda install shapely
       conda install fiona
       conda install PIL
-      pip install pyproj
-      pip install descartes
+      conda install pyproj
+      conda install descartes
       pip install rasterio
       ```
-  * Note: You can use `pillow` in place of `PIL` if you like.
+  * You can use `pillow` in place of `PIL` if you like.
+  * If any of the above commands cause an error, you can use `pip` instead (replace `PACKAGE` below with the package you are trying to install):
+
+    ```bash
+    pip install PACKAGE
+    ```
+  * or check to see if a `conda` package exists using `binstar`:
+
+    ```bash
+    conda install binstar
+    binstar search -t conda PACKAGE
+    ```
+    * Make sure you find one for your OS. You can get more info about a package using the following command, which will also explain how to install the package:
+
+      ```bash
+      binstar show <USER/PACKAGE>
+      ```
+    * For example, I used the following to install `pyproj` on OSX:
+
+      ```bash
+      conda install --channel https://conda.binstar.org/asmeurer pyproj
+      ```
 
 * Install `geopandas` (important!)
 
       ```bash
-      pip install git+git://github.com/kjordahl/geopandas.git
+      pip install geopandas
       ```
 
 ## (Web)mapping Packages
 
-* Install `cartopy` (on Windows, use [binaries from here](http://www.lfd.uci.edu/~gohlke/pythonlibs/) for `cartopy`)
+* Install `cartopy` (on Windows, use [binaries from here](http://www.lfd.uci.edu/~gohlke/pythonlibs/) for `cartopy`.)
 
     ```bash 
     pip install pyshp
-    pip install Cython
-    pip install git+git://github.com/SciTools/cartopy.git
+    pip install cartopy
     ```
 
-* Alternatively (better?), you can install `cartopy` via `conda` like this:
+  * If you aren't on Windows, you can alternatively try the `binstar` method like this:
 
     ```bash
     conda remove geos shapely cartopy
     conda install -c rsignell cartopy
     ```
 
-* mplleaflet (for making slippy maps)
+* Install `mplleaflet` (for making slippy maps). See the `Known Issues` below about install `git`.
 
     ```bash
     pip install git+git://github.com/mpld3/mplexporter.git
     pip install git+git://github.com/jwass/mplleaflet.git
     ```
 
-* geojson.py for shooting data to the web!
+* Install `geojson.py` for shooting data to the web!
 
     ```bash
     pip install git+git://github.com/jwass/geojsonio.py.git
@@ -70,13 +92,13 @@
 
 ## Optional Packages
 
-* Install `basemap`, a common package for making static maps
+* Install `basemap`, a common package for making static maps (I didn't install this):
 
     ```bash
     conda install basemap
     ```
 
-* Install `psycopg2` for interacting with PostGIS
+* Install `psycopg2` for interacting with PostGIS (We don't need this, but I will do a demo with this):
 
     ```bash
     pip install psycopg2
@@ -84,7 +106,20 @@
 
 ## Install QGIS
 
-* Go to the [official QGIS page](http://qgis.org/en/site/forusers/download.html) for details, or install via `brew` on OSX, `apt-get` on Linux, or `OSGeo4W` on Windows.
+* Go to the [official QGIS page](http://qgis.org/en/site/forusers/download.html) for details, or install via `brew` on OSX, `apt-get` on Linux, or `OSGeo4W` on Windows (Either way, this install will likely take quite a while).
+  * I installed this on OSX via `homebrew` with:
+
+    ```bash
+    brew tap osgeo/osgeo4mac
+    brew install qgis-26
+    ```
+  * On Linux, if you follow the `Linux Initial Setup` below first, you should be able to install QGIS with:
+
+    ```bash
+    sudo apt-get install qgis
+    ```
+    
+  * On Windows, follow the instructions on the official QGIS page.
 
 ## Alternative Install Guide
 
@@ -93,20 +128,24 @@
 ## Known Issues
 
 * Linux Initial Setup
-```bash
-sudo add-apt-repository -y ppa:ubuntugis/ppa
-sudo apt-get update -qq
-sudo apt-get install -y gdal-bin libgdal-dev
-```
+
+    ```bash
+    sudo add-apt-repository -y ppa:ubuntugis/ppa
+    sudo apt-get update -qq
+    sudo apt-get install -y gdal-bin libgdal-dev
+    ```
 
 * OSX Initial Setup
-    * First install [`brew`](http://brew.sh/): `ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"`
-   * Then update and install `gdal`
-```bash
-brew doctor
-brew update
-brew install gdal
-```
+   * First install [`brew`](http://brew.sh/): `ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"`
+   * Then update and install `gdal` (You might be able to skip this step if you `conda install fiona` [see above]).
+
+      ```bash
+      brew doctor
+      brew update
+      brew tap osgeo/osgeo4mac
+      brew install gdal
+      brew install qgis
+      ```
 
 * Windows Initial Setup
    * Download and install GDAL [from here](http://www.lfd.uci.edu/~gohlke/pythonlibs/#gdal)
@@ -122,20 +161,24 @@ brew install gdal
 * The `openpyxl` dependency of `pandas` may produce a funny warning: `UserWarning: Installed openpyxl is not supported at this time. Use >=1.6.1 and <2.0.0`
 
    * To fix this warning, try the following:
-```bash
-pip install openpyxl
-pip uninstall openpyxl
-pip install openpyxl==1.8.6 
-```
+
+      ```bash
+      pip install openpyxl
+      pip uninstall openpyxl
+      pip install openpyxl==1.8.6 
+      ```
+
 * In some cases, importing `shapely` on OSX might fail while loading the GEOS library. This could throw an exception of the form "OSError: Could not find library c or load any of its variants". This can be fixed by using some newer versions or worked around by setting the following environment variable (add to your `.bash_profile`; see [this issue](https://github.com/cfarmer/python_geospatial/issues/3) for details):
-```bash
-export DYLD_FALLBACK_LIBRARY_PATH=$(HOME)/lib:/usr/local/lib:/lib:/usr/lib
-```
+
+      ```bash
+      export DYLD_FALLBACK_LIBRARY_PATH=$(HOME)/lib:/usr/local/lib:/lib:/usr/lib
+      ```
 
 * On vanilla Ubuntu, you might need to install `g++` before installing `rasterio`:
-```bash
-sudo apt-get install g++
-```
+
+      ```bash
+      sudo apt-get install g++
+      ```
 
 * On OSX (Mavericks), if you don't already have developer tools installed, `pip install pyproj` will 
 probably fail (due to missing `gcc`) and then ask you if you want to install them, so click 'yes' and 
