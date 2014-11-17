@@ -9,8 +9,8 @@ For the tutorial, all [data](data), [exercises](exercises), and [notebooks](note
 
 The presentation materials are available at the following links:
 
-* [Part 1](https://dl.dropboxusercontent.com/u/14940391/scipy2014/Presentation1.slides.html)
-* [Part 2](https://dl.dropboxusercontent.com/u/14940391/scipy2014/Presentation2.slides.html)
-* [Part 3](https://dl.dropboxusercontent.com/u/14940391/scipy2014/Presentation3.slides.html)
-* [Part 4](https://dl.dropboxusercontent.com/u/14940391/scipy2014/Presentation4.slides.html)
-* [Part 5](https://dl.dropboxusercontent.com/u/14940391/scipy2014/Presentation5.slides.html)
+* [Part 1](https://dl.dropboxusercontent.com/u/14940391/python_geospatial/Presentation1.slides.html)
+* [Part 2](https://dl.dropboxusercontent.com/u/14940391/python_geospatial/Presentation2.slides.html)
+* [Part 3](https://dl.dropboxusercontent.com/u/14940391/python_geospatial/Presentation3.slides.html)
+* [Part 4](https://dl.dropboxusercontent.com/u/14940391/python_geospatial/Presentation4.slides.html)
+* [Part 5](https://dl.dropboxusercontent.com/u/14940391/python_geospatial/Presentation5.slides.html)
