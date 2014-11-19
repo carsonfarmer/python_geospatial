@@ -1,4 +1,6 @@
-# Installation Instructions 
+# Installation Instructions
+
+If you are planning to go through the "Geospatial data in Python: Database, desktop, and the web" tutorial associated with this Github repository, the following are the suggested installation instructions. We *will* take time during the session to go over installation issues, but if possible, at least *try* to have some of these installation steps completed before we start. If you are unsure of how/where to start, no problem, just show up to the session (or better yet, the 'install party' beforehand) and we'll get you going!
 
 ## Base Install
 
