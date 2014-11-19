@@ -5,7 +5,7 @@ If you are planning to participate in the "Geospatial data in Python: Database, 
 ## Base Install
 
 * Install [`Anaconda`](http://continuum.io/downloads) (I'm using Anaconda-2.1.0 [64-Bit - Python 2.7])
-   * We're using `Anaconda` because it helps us to keep our `Python` environment clean and manageable. If you prefer, you can also use [`Canopy`](https://store.enthought.com/downloads/) or an alternative `Python` environment.
+   * We're using `Anaconda` because it helps us to keep our `Python` environment clean and manageable. If you prefer, you can also use [`Canopy`](https://store.enthought.com/downloads/) or an [alternative `Python` distribution](http://www.scipy.org/install.html#scientific-python-distributions).
 
 * Create a new virtual environment (Skip this step on Windows, trust me, it'll be easier):
 
