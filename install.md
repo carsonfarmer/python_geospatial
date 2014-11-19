@@ -137,7 +137,12 @@ If you are planning to participate in the "Geospatial data in Python: Database, 
     sudo apt-get install -y gdal-bin libgdal-dev
     ```
 
-* On vanilla Ubuntu, you might need to install `g++` before installing `rasterio` and others:
+  * On newer versions of Ubuntu (14.04 +), you may want to use the *unstable* repo (which is actually quite stable):
+
+      ```bash
+      sudo add-apt-repository ppa:ubuntugis/ubuntugis-unstable
+      ```
+  * On vanilla Ubuntu, you might need to install `g++` before installing `rasterio` and others:
 
       ```bash
       sudo apt-get install g++
