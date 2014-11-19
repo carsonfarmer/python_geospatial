@@ -133,7 +133,7 @@ If you are planning to participate in the "Geospatial data in Python: Database, 
     ```bash
     sudo apt-get install git
     sudo add-apt-repository -y ppa:ubuntugis/ppa
-    sudo apt-get update -qq
+    sudo apt-get update
     sudo apt-get install -y gdal-bin libgdal-dev
     ```
 
